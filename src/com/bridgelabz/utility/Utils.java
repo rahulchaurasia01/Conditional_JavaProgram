@@ -14,7 +14,7 @@ public class Utils {
 
 	
 	/**
-	 *  Purpose:- Flip a Coin - Head or Tails
+	 *  Purpose:- Flip a Coin
 	 */
 	public void flipCoin() {
 		
@@ -24,5 +24,82 @@ public class Utils {
 			System.out.println("Tails");
 		
 	}
+	
+	
+	/**
+	 * Purpose:- To calculate the power of 2.
+	 * 
+	 * @param n
+	 */
+	public void powerOf2(int n) {
+		
+		int sum = 1;
+		
+		for(int i=0;i<n;i++)
+		{
+			sum = sum * 2;
+			System.out.println(sum);
+		}
+		
+	}
+	
+	
+	/**
+	 * Purpose:- To calculate the harmonic Number.
+	 * 
+	 * @param n
+	 * @return
+	 */
+	public double harmonicNumber(int n) {
+		
+		double sum = 0;
+		
+		for(int i=1;i<=n;i++)
+		{
+			sum = (double)sum + (double)1/i;
+		}
+		
+		return sum;
+		
+	}
+	
+	
+	/**
+	 * Purpose:- Check No. for the square root
+	 * 
+	 * @param no
+	 * @return True or False
+	 */
+	public boolean checkNumber(int no) {
+		if(no < 0) 
+			return false;
+		else
+			return true;
+	}
+	
+	
+	public double sqrtNumber(int c) {
+		
+		double t = c;
+		double epsilon = 1e-15;
+		
+		while(Math.abs(t-(c/t)) < epsilon*t)
+		{
+			t = c/t+t;
+			System.out.println(t);
+		}
+		
+		return t;
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }
